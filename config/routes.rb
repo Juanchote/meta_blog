@@ -1,10 +1,10 @@
 MetaBlog::Application.routes.draw do
 
 scope :meta_blog do
- scope :api, defaults: { format: :json } do
-    resources :blog_entries do
+ scope :api do
+    resources :blog_entries, except: [:new] do
       member do
-        resources :comments
+        resources :comments, except: [:new]
       end
     end
   end

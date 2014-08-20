@@ -4,6 +4,7 @@ class BlogEntriesController < ApplicationController
     @blog_entry = BlogEntry.new(blog_entry_params)
     binding.pry
     status = :created
+
     if @blog_entry.save
       render json: @blog_entry, status: :created
     else
@@ -14,16 +15,17 @@ class BlogEntriesController < ApplicationController
   def index
     @blog_entries = BlogEntry.all
 
-    render json: @blog_entries, status: 200 
+    render json: @blog_entries, status: 200
   end
 
   def show
-    @blog_entry = BlogEntry.find_by_id(params[:id]).to_json(:include => :comments)
+    @blog_entry = BlogEntry.find_by(id: params[:id])
 
-    unless @blog_entry.nil?
-      render json: @blog_entry, status: 200
+    if @blog_entry
+      @blog_entry.to_json(:include => :comments)
+      render json: @blog_entry, status: :ok
     else
-      render json: "FAIL", status: 400
+      render json: { errors: 'Entry not found' }, status: :not_found
     end
   end
 

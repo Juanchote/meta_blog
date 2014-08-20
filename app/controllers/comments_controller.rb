@@ -1,9 +1,5 @@
 class CommentsController < ApplicationController
 
-  def new
-
-  end
-
   def create
   	@comment = Comment.new(comment_params)
   	@comment.assign_attributes(blog_entry_id: params[:id])
@@ -28,9 +24,9 @@ class CommentsController < ApplicationController
   	@comment = Comment.find_by_id params[:id]
 
   	unless @comment.nil?
-			render json: @comment, status: 200 
+			render json: @comment, status: 200
 	  else
-			render json: "FAIL", status: 400
+			render json: {"errors": "no id"}, status: 400
 	  end
   end
 

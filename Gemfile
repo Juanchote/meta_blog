@@ -10,12 +10,15 @@ gem 'pg'
 gem 'will_paginate', '~> 3.0'
 gem 'activerecord-session_store'
 
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 group :development do
 	gem 'jazz_hands'
 end
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.0.0'
+  gem 'factory_girl_rails'
 end
 
 # Gems used only for assets and not required
