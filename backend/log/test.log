@@ -1,0 +1,1870 @@
+  [1m[36m (130.4ms)[0m  [1mDROP DATABASE IF EXISTS "metablog_test"[0m
+  [1m[35m (2987.4ms)[0m  CREATE DATABASE "metablog_test" ENCODING = 'utf8'
+  [1m[36mSQL (2.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (124.1ms)[0m  CREATE TABLE "blog_entries" ("id" serial primary key, "title" character varying(255), "post" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (26.5ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "title" character varying(255), "post" text, "created_at" timestamp, "updated_at" timestamp, "blog_entry_id" integer) [0m
+  [1m[35m (6.2ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (12.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (3.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140817103115')[0m
+  [1m[35m (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140814070155')
+  [1m[36m (2.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140817100320')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Unable to load post, underlying cause No such file to load -- post 
+
+ /home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `require'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `block in require'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `require'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:329:in `require_or_load'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:288:in `depend_on'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:206:in `require_dependency'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activerecord-4.0.0/lib/active_record/fixtures.rb:773:in `try_to_load_dependency'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activerecord-4.0.0/lib/active_record/fixtures.rb:792:in `block in require_fixture_classes'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activerecord-4.0.0/lib/active_record/fixtures.rb:790:in `each'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activerecord-4.0.0/lib/active_record/fixtures.rb:790:in `require_fixture_classes'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activerecord-4.0.0/lib/active_record/fixtures.rb:768:in `fixtures'
+/home/juanma/meta_blog/meta_blog/test/test_helper.rb:10:in `<class:TestCase>'
+/home/juanma/meta_blog/meta_blog/test/test_helper.rb:5:in `<top (required)>'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `require'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `block in require'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `require'
+/home/juanma/meta_blog/meta_blog/test/helpers/blog_entry_helper_test.rb:1:in `<top (required)>'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `require'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `block in require'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `require'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/railties-4.0.0/lib/rails/test_unit/sub_test_task.rb:73:in `block (3 levels) in define'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/railties-4.0.0/lib/rails/test_unit/sub_test_task.rb:73:in `each'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/railties-4.0.0/lib/rails/test_unit/sub_test_task.rb:73:in `block (2 levels) in define'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/railties-4.0.0/lib/rails/test_unit/sub_test_task.rb:72:in `each'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/railties-4.0.0/lib/rails/test_unit/sub_test_task.rb:72:in `block in define'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:240:in `call'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:240:in `block in execute'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:235:in `each'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:235:in `execute'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:179:in `block in invoke_with_call_chain'
+/home/juanma/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:201:in `block in invoke_prerequisites'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:199:in `each'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:199:in `invoke_prerequisites'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:178:in `block in invoke_with_call_chain'
+/home/juanma/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:165:in `invoke'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/railties-4.0.0/lib/rails/test_unit/testing.rake:61:in `block in <top (required)>'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:240:in `call'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:240:in `block in execute'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:235:in `each'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:235:in `execute'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:179:in `block in invoke_with_call_chain'
+/home/juanma/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:172:in `invoke_with_call_chain'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/task.rb:165:in `invoke'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/application.rb:150:in `invoke_task'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/application.rb:106:in `block (2 levels) in top_level'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/application.rb:106:in `each'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/application.rb:106:in `block in top_level'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/application.rb:115:in `run_with_threads'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/application.rb:100:in `top_level'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/application.rb:78:in `block in run'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/application.rb:176:in `standard_exception_handling'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/lib/rake/application.rb:75:in `run'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/gems/rake-10.3.2/bin/rake:33:in `<top (required)>'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/bin/rake:23:in `load'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/bin/rake:23:in `<main>'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/bin/ruby_executable_hooks:15:in `eval'
+/home/juanma/.rvm/gems/ruby-2.1.1@metablog/bin/ruby_executable_hooks:15:in `<main>'
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "blog_entries" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (1.2ms)[0m  [1mDELETE FROM "posts"[0m
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: DELETE FROM "posts"
+                    ^
+: DELETE FROM "posts"
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "blog_entries" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "blog_entries" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: DELETE FROM "posts"
+                    ^
+: DELETE FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "blog_entries" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "blog_entries" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "posts"[0m
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: DELETE FROM "posts"
+                    ^
+: DELETE FROM "posts"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "blog_entries" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "blog_entries" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.5ms)[0m  DELETE FROM "posts"
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: DELETE FROM "posts"
+                    ^
+: DELETE FROM "posts"
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "blog_entries" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "blog_entries" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mFixture Delete (1.3ms)[0m  [1mDELETE FROM "posts"[0m
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: DELETE FROM "posts"
+                    ^
+: DELETE FROM "posts"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "blog_entries" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "blog_entries" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "posts"
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: DELETE FROM "posts"
+                    ^
+: DELETE FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "blog_entries" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "blog_entries" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (2.5ms)[0m  [1mDELETE FROM "posts"[0m
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: DELETE FROM "posts"
+                    ^
+: DELETE FROM "posts"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "blog_entries" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "blog_entries" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "posts"
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: DELETE FROM "posts"
+                    ^
+: DELETE FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "blog_entries" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "blog_entries" DISABLE TRIGGER ALL;ALTER TABLE "comments" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "posts"[0m
+PG::UndefinedTable: ERROR:  relation "posts" does not exist
+LINE 1: DELETE FROM "posts"
+                    ^
+: DELETE FROM "posts"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "blog_entries" ENABLE TRIGGER ALL;ALTER TABLE "comments" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL[0m
+  [1m[36m (215.3ms)[0m  [1mDROP DATABASE IF EXISTS "metablog_test"[0m
+  [1m[35m (1064.8ms)[0m  CREATE DATABASE "metablog_test" ENCODING = 'utf8'
+  [1m[36mSQL (2.0ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (20.5ms)[0m  CREATE TABLE "blog_entries" ("id" serial primary key, "title" character varying(255), "post" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (43.4ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "title" character varying(255), "post" text, "created_at" timestamp, "updated_at" timestamp, "blog_entry_id" integer) [0m
+  [1m[35m (2.4ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (11.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140817103115')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140814070155')
+  [1m[36m (2.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140817100320')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (19.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (20.3ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 51ms (Views: 2.3ms | ActiveRecord: 20.3ms)
+  [1m[35m (1.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.5ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.4ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.6ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (5.1ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (1.7ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.5ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.5ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.3ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.5ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.5ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.6ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+Completed 200 OK in 71ms (Views: 0.1ms | ActiveRecord: 2.1ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.5ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.9ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[36mBlogEntry Load (0.3ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (1.2ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.6ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 2.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mBlogEntry Load (0.3ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 100 LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.6ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mBlogEntry Load (0.3ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 100 LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.5ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.8ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 2.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mBlogEntry Load (0.4ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 100 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.9ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+Completed 404 Not Found in 9ms (Views: 0.2ms | ActiveRecord: 3.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mBlogEntry Load (0.3ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 100 LIMIT 1[0m
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.6ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 100 LIMIT 1
+Completed 404 Not Found in 7ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.5ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.9ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-20 23:58:21.786851"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-20 23:58:21.786851"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogEntry Load (0.6ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1[0m
+  [1m[35mComment Load (8.6ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1  [["blog_entry_id", 1]]
+Completed 200 OK in 30ms (Views: 0.4ms | ActiveRecord: 10.1ms)
+  [1m[36m (1.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mBlogEntry Load (0.4ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 100 LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.6ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-20 23:58:39.291337"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-20 23:58:39.291337"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogEntry Load (0.7ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1  [["blog_entry_id", 1]]
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[36mBlogEntry Load (0.3ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (11.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 18:17:22.237682"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 18:17:22.237682"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 38ms (Views: 0.4ms | ActiveRecord: 14.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 80ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 18:17:22.347466"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 18:17:22.347466"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.6ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 2.7ms)
+  [1m[35m (1.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 18:17:46.180718"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 18:17:46.180718"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 26ms (Views: 0.4ms | ActiveRecord: 3.4ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 18:17:46.208517"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 18:17:46.208517"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.9ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 19:30:31.628493"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 19:30:31.628493"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 27ms (Views: 0.4ms | ActiveRecord: 3.8ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 19:30:31.653630"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 19:30:31.653630"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 25ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 19:31:52.785612"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 19:31:52.785612"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 32ms (Views: 0.3ms | ActiveRecord: 4.3ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 17ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (1.2ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 1.2ms)
+  [1m[36m (1.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 19:31:52.835754"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 19:31:52.835754"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (2.2ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 55ms (Views: 0.4ms | ActiveRecord: 6.9ms)
+  [1m[35m (1.7ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+Completed 500 Internal Server Error in 25ms
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#index as HTML
+  [1m[36mBlogEntry Load (0.5ms)[0m  [1mSELECT "blog_entries".* FROM "blog_entries"[0m
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 19:32:07.548897"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 19:32:07.548897"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBlogEntry Load (0.9ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1[0m
+  [1m[35mComment Load (1.1ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1  [["blog_entry_id", 1]]
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 3.1ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[36mBlogEntry Load (0.3ms)[0m  [1mSELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 19:52:03.739387"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 19:52:03.739387"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 20ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 19:52:03.764862"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 19:52:03.764862"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (2.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 26ms (Views: 1.0ms | ActiveRecord: 3.7ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 19:55:36.068046"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 19:55:36.068046"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 32ms (Views: 0.4ms | ActiveRecord: 3.7ms)
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 19:55:36.093554"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 19:55:36.093554"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (3.1ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 27ms (Views: 0.3ms | ActiveRecord: 4.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 19:55:36.132332"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 19:55:36.132332"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 30ms (Views: 0.7ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 19:57:46.510237"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 19:57:46.510237"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 19ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 19:57:46.536591"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 19:57:46.536591"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.6ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (1.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 19:57:46.575396"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 19:57:46.575396"]]
+  [1m[36m (0.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 20:00:59.291917"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 20:00:59.291917"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 21ms (Views: 0.4ms | ActiveRecord: 3.4ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:00:59.317715"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:00:59.317715"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (2.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (1.5ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 500 Internal Server Error in 32ms
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (2.8ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 4ms (Views: 0.4ms | ActiveRecord: 2.8ms)
+  [1m[36m (2.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (2.7ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:00:59.373831"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:00:59.373831"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 20:01:41.056427"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 20:01:41.056427"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 18ms (Views: 0.4ms | ActiveRecord: 3.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:01:41.082216"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:01:41.082216"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (1.7ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 500 Internal Server Error in 49ms
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (1.3ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:01:41.144210"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:01:41.144210"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 20:03:15.034223"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 20:03:15.034223"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 34ms (Views: 0.5ms | ActiveRecord: 11.7ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.6ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:03:15.077812"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:03:15.077812"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (1.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 500 Internal Server Error in 34ms
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:03:15.129605"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:03:15.129605"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 20:03:46.528401"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 20:03:46.528401"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 21ms (Views: 0.4ms | ActiveRecord: 3.4ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:03:46.555091"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:03:46.555091"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (1.2ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 2.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:03:46.593146"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:03:46.593146"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.6ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 20:05:36.367171"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 20:05:36.367171"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 23ms (Views: 0.2ms | ActiveRecord: 3.8ms)
+  [1m[35m (2.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:05:36.394488"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:05:36.394488"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 25ms (Views: 0.5ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:05:36.431469"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:05:36.431469"]]
+  [1m[36m (0.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 20:13:32.499490"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 20:13:32.499490"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 27ms (Views: 0.4ms | ActiveRecord: 10.1ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:13:32.524942"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:13:32.524942"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (2.9ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (1.1ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 5.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:13:32.561960"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:13:32.561960"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (2.0ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 20:14:53.805084"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 20:14:53.805084"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 17ms (Views: 0.4ms | ActiveRecord: 3.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:14:53.829856"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:14:53.829856"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (2.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.1ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:14:53.873378"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:14:53.873378"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (1.1ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 3.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (5.2ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 20:16:34.922737"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 20:16:34.922737"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 52ms (Views: 0.4ms | ActiveRecord: 8.8ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 15ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (1.6ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (1.9ms)[0m  BEGIN
+  [1m[36m (2.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:16:34.986676"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:16:34.986676"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (1.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 33ms (Views: 0.2ms | ActiveRecord: 2.6ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:16:35.044979"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:16:35.044979"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 20:22:43.393136"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 20:22:43.393136"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 21ms (Views: 0.4ms | ActiveRecord: 3.7ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (1.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.6ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:22:43.420878"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:22:43.420878"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.7ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (2.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 4ms (Views: 0.5ms | ActiveRecord: 2.5ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 20:22:43.466496"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 20:22:43.466496"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mComment Load (0.6ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = -1 LIMIT 1
+Completed 404 Not Found in 7ms (Views: 0.3ms | ActiveRecord: 4.2ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:22:14.308402"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:22:14.308402"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 20ms (Views: 0.4ms | ActiveRecord: 4.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:22:14.335701"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:22:14.335701"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.9ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.9ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:22:14.376683"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:22:14.376683"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = -1 LIMIT 1
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.7ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (3.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:23:43.622911"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:23:43.622911"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 37ms (Views: 0.4ms | ActiveRecord: 13.0ms)
+  [1m[35m (1.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (2.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 17ms (Views: 0.3ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (1.5ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (4.6ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 4.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:23:43.676629"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:23:43.676629"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.6ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 34ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:23:43.728221"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:23:43.728221"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.3ms)[0m  [1mINSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-08-29 21:23:43.754413"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-29 21:23:43.754413"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:26:24.097057"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:26:24.097057"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 20ms (Views: 0.4ms | ActiveRecord: 4.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.9ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:26:24.122312"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:26:24.122312"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (2.7ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 4.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:26:24.157001"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:26:24.157001"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (2.9ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 3.9ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 21:26:24.171339"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:26:24.171339"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"test title", "post"=>"test body"}, "id"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("blog_entry_id", "created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["blog_entry_id", 1], ["created_at", "2014-08-29 21:26:24.181830"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:26:24.181830"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 11ms (Views: 1.7ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-08-29 21:26:24.196920"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-29 21:26:24.196920"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mComment Load (0.5ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:26:59.929785"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:26:59.929785"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 18ms (Views: 0.4ms | ActiveRecord: 3.3ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (1.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 16ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (2.9ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:26:59.978784"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:26:59.978784"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (1.0ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 52ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:27:00.049869"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:27:00.049869"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 21:27:00.059851"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:27:00.059851"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"test title", "post"=>"test body"}, "id"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "comments" ("blog_entry_id", "created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["blog_entry_id", 1], ["created_at", "2014-08-29 21:27:00.073958"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:27:00.073958"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 13ms (Views: 0.1ms | ActiveRecord: 2.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-08-29 21:27:00.085810"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-29 21:27:00.085810"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 5 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:27:36.309722"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:27:36.309722"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 20ms (Views: 0.4ms | ActiveRecord: 3.9ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (1.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:27:36.335811"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:27:36.335811"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:27:36.373114"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:27:36.373114"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.8ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 21:27:36.387981"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:27:36.387981"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"test title", "post"=>"test body"}, "id"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("blog_entry_id", "created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["blog_entry_id", 1], ["created_at", "2014-08-29 21:27:36.397336"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:27:36.397336"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 10ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 21:27:36.404223"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:27:36.404223"]]
+  [1m[35m (2.8ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"just title"}, "id"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("blog_entry_id", "created_at", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["blog_entry_id", 1], ["created_at", "2014-08-29 21:27:36.412739"], ["title", "just title"], ["updated_at", "2014-08-29 21:27:36.412739"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 4ms (Views: 0.0ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-08-29 21:27:36.419733"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-29 21:27:36.419733"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 8 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.6ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:28:52.077891"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:28:52.077891"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 36ms (Views: 0.4ms | ActiveRecord: 16.5ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (3.5ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 15ms (Views: 0.3ms | ActiveRecord: 3.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:28:52.130688"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:28:52.130688"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (1.9ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 3.5ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:28:52.195133"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:28:52.195133"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 21:28:52.213436"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:28:52.213436"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"test title", "post"=>"test body"}, "id"=>"1"}
+  [1m[36m (4.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("blog_entry_id", "created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["blog_entry_id", 1], ["created_at", "2014-08-29 21:28:52.237153"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:28:52.237153"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 20ms (Views: 0.3ms | ActiveRecord: 6.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 21:28:52.244615"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:28:52.244615"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"just title"}, "id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (3.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 422 Unprocessable Entity in 6ms (Views: 0.3ms | ActiveRecord: 3.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:28:52.272714"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-29 21:28:52.272714"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 10 LIMIT 1
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = -1 LIMIT 1[0m
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:29:17.878767"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:29:17.878767"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 20ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 16ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:29:17.919079"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:29:17.919079"]]
+  [1m[36m (1.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.6ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.9ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+  [1m[35m (1.0ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.5ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:29:17.963775"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:29:17.963775"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 21:29:17.975625"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:29:17.975625"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"test title", "post"=>"test body"}, "id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "comments" ("blog_entry_id", "created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["blog_entry_id", 1], ["created_at", "2014-08-29 21:29:17.991432"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:29:17.991432"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 14ms (Views: 0.4ms | ActiveRecord: 5.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 21:29:17.997625"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:29:17.997625"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"just title"}, "id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:29:18.014871"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-29 21:29:18.014871"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mComment Load (0.5ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 12 LIMIT 1
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+  [1m[36m (3.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[36mComment Load (1.2ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = -1 LIMIT 1[0m
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-08-29 21:29:18.041632"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-29 21:29:18.041632"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#destroy as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 13 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 3.6ms)
+  [1m[36m (2.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:30:26.804707"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:30:26.804707"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 24ms (Views: 0.2ms | ActiveRecord: 3.8ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (1.5ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:30:26.832176"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:30:26.832176"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.8ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:30:26.869146"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:30:26.869146"]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 21:30:26.883427"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:30:26.883427"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"test title", "post"=>"test body"}, "id"=>"1"}
+  [1m[36m (2.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "comments" ("blog_entry_id", "created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["blog_entry_id", 1], ["created_at", "2014-08-29 21:30:26.898669"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-29 21:30:26.898669"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 18ms (Views: 0.4ms | ActiveRecord: 7.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-29 21:30:26.908941"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:30:26.908941"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"just title"}, "id"=>"1"}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 422 Unprocessable Entity in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-29 21:30:26.922155"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-29 21:30:26.922155"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CommentsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.3ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1  ORDER BY "comments"."id" DESC[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-08-29 21:30:26.930530"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-29 21:30:26.930530"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 15 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-29 21:30:26.948317"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-29 21:30:26.948317"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CommentsController#destroy as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 16 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = $1  [["id", 16]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
