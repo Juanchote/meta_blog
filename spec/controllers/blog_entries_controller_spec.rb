@@ -21,8 +21,8 @@ RSpec.describe BlogEntriesController do
   end
 
 	describe "#index" do
-		before { get :index }
-	 	it { expect(response).to have_http_status(:ok) }
+    before { get :index }
+    it { expect(response).to have_http_status(:ok) }
   end
 
   describe "#show" do

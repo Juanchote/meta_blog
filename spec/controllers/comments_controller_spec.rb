@@ -22,11 +22,11 @@ RSpec.describe CommentsController do
     end
   end
 
-	describe "#index" do
+  describe "#index" do
     let(:blog_entry) { FactoryGirl.create(:blog_entry) }
 
-		before { get :index, :id => blog_entry.id }
-	 	it { expect(response).to have_http_status(:ok) }
+    before { get :index, :id => blog_entry.id }
+    it { expect(response).to have_http_status(:ok) }
   end
 
   describe "#show" do
