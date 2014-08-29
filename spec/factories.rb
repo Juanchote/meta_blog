@@ -1,7 +1,7 @@
 #require 'rspec'
 
 FactoryGirl.define do
-  factory :first_comment do
+  factory :comment do
     title ""
     post "Best Entry ev4h"
   end

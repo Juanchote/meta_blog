@@ -1,35 +1,39 @@
 require 'rails_helper'
 
-RSpec.describe BlogEntriesController do
+RSpec.describe CommentsController do
   describe "#create" do
+    let(:blog_entry) { FactoryGirl.create(:blog_entry) }
+
     describe ":created" do
       json = {"title" => "test title",
               "post" => "test body"
               }
-      before { get :create, :blog_entry => json }
+      before { get :create, :comment => json, :id => blog_entry.id }
 
       it { expect(response).to have_http_status(:created) }
     end
 
     describe ":unprocessable_entity" do
-      json = {"title" => "just title"}
+      json = { "title" => "just title" }
 
-      before { get :create, :blog_entry => json }
+      before { get :create, :comment => json, :id => blog_entry.id }
 
       it {expect(response).to have_http_status(:unprocessable_entity)}
     end
   end
 
 	describe "#index" do
-		before { get :index }
+    let(:blog_entry) { FactoryGirl.create(:blog_entry) }
+
+		before { get :index, :id => blog_entry.id }
 	 	it { expect(response).to have_http_status(:ok) }
   end
 
   describe "#show" do
     describe ":ok" do
-      let(:blog_entry) { FactoryGirl.create(:blog_entry) }
+      let(:comment) { FactoryGirl.create(:comment) }
 
-      before { get :show, :id => blog_entry.id }
+      before { get :show, :id => comment.id }
       it { expect(response).to have_http_status(:ok) }
     end
 
@@ -40,9 +44,9 @@ RSpec.describe BlogEntriesController do
   end
 
   describe "#destroy" do
-    let(:blog_entry) { FactoryGirl.create(:blog_entry) }
+    let(:comment) { FactoryGirl.create(:comment) }
 
-    before { delete :destroy, :id => blog_entry.id }
+    before { delete :destroy, :id => comment.id }
 
     it { expect(response).to have_http_status(:ok) }
   end
