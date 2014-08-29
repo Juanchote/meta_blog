@@ -4,7 +4,7 @@ RSpec.describe CommentsController do
   describe "#create" do
     let(:blog_entry) { FactoryGirl.create(:blog_entry) }
 
-    describe ":created" do
+    context "with valid values" do
       json = {"title" => "test title",
               "post" => "test body"
               }
@@ -13,7 +13,7 @@ RSpec.describe CommentsController do
       it { expect(response).to have_http_status(:created) }
     end
 
-    describe ":unprocessable_entity" do
+    context "with invalid values" do
       json = { "title" => "just title" }
 
       before { get :create, :comment => json, :id => blog_entry.id }
@@ -30,14 +30,14 @@ RSpec.describe CommentsController do
   end
 
   describe "#show" do
-    describe ":ok" do
+    context "with valid id" do
       let(:comment) { FactoryGirl.create(:comment) }
 
       before { get :show, :id => comment.id }
       it { expect(response).to have_http_status(:ok) }
     end
 
-    describe ":not_found" do
+    context "with invalid id" do
       before { get :show, :id => -1 }
       it { expect(response).to have_http_status(:not_found) }
     end

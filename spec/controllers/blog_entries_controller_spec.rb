@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe BlogEntriesController do
   describe "#create" do
-    describe ":created" do
+    context "with valid values" do
       json = {"title" => "test title",
               "post" => "test body"
               }
@@ -11,7 +11,7 @@ RSpec.describe BlogEntriesController do
       it { expect(response).to have_http_status(:created) }
     end
 
-    describe ":unprocessable_entity" do
+    context ":unprocessable_entity" do
       json = {"title" => "just title"}
 
       before { get :create, :blog_entry => json }
@@ -26,14 +26,14 @@ RSpec.describe BlogEntriesController do
   end
 
   describe "#show" do
-    describe ":ok" do
+    context "with valid id" do
       let(:blog_entry) { FactoryGirl.create(:blog_entry) }
 
       before { get :show, :id => blog_entry.id }
       it { expect(response).to have_http_status(:ok) }
     end
 
-    describe ":not_found" do
+    context "with invalid id" do
       before { get :show, :id => -1 }
       it { expect(response).to have_http_status(:not_found) }
     end
