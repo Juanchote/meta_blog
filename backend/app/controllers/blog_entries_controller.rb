@@ -17,7 +17,6 @@ class BlogEntriesController < ApplicationController
   def show
     @blog_entry = BlogEntry.find_by(id: params[:id])
 
-
     get(@blog_entry, { :include => :comments })
   end
 

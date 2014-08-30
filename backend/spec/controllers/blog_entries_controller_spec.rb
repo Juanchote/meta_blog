@@ -11,7 +11,7 @@ RSpec.describe BlogEntriesController do
       it { expect(response).to have_http_status(:created) }
     end
 
-    context ":unprocessable_entity" do
+    context "with invalid values" do
       json = {"title" => "just title"}
 
       before { get :create, :blog_entry => json }

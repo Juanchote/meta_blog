@@ -13,7 +13,7 @@ module ApplicationHelper
     end
   end
 
-  def get(object, params={})
+  def get(object, params = {})
     if object
       output = params.empty? ? object : object.to_json(params)
       render json: output, status: :ok

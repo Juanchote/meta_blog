@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/juanma/meta_blog/meta_blog/config/environment.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/juanma/meta_blog/meta_blog/config/application.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/application.rb": [
         1,
         null,
         1,
@@ -72,7 +72,7 @@
         null,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/config/boot.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/boot.rb": [
         1,
         null,
         null,
@@ -80,7 +80,7 @@
         null,
         1
       ],
-      "/home/juanma/meta_blog/meta_blog/config/environments/test.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/environments/test.rb": [
         1,
         null,
         null,
@@ -120,7 +120,7 @@
         1,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/config/initializers/backtrace_silencers.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -129,7 +129,7 @@
         null,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/config/initializers/inflections.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -146,14 +146,14 @@
         null,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/config/initializers/mime_types.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/config/initializers/secret_token.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -162,7 +162,7 @@
         null,
         1
       ],
-      "/home/juanma/meta_blog/meta_blog/config/initializers/session_store.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/initializers/session_store.rb": [
         null,
         null,
         1,
@@ -172,7 +172,7 @@
         null,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/config/initializers/wrap_parameters.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -188,7 +188,7 @@
         1,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/config/routes.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/config/routes.rb": [
         1,
         null,
         1,
@@ -262,30 +262,50 @@
         null,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/app/helpers/application_helper.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/app/helpers/application_helper.rb": [
+        1,
+        1,
+        4,
+        2,
+        null,
+        2,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        null,
+        1,
+        6,
+        4,
+        4,
+        null,
+        2,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/juanma/meta_blog/meta_blog/backend/app/helpers/blog_entry_helper.rb": [
         1,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/app/helpers/blog_entry_helper.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/app/helpers/posts_helper.rb": [
         1,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/app/helpers/posts_helper.rb": [
-        1,
-        null
-      ],
-      "/home/juanma/meta_blog/meta_blog/app/controllers/blog_entries_controller.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/app/controllers/blog_entries_controller.rb": [
         1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
         null,
-        0,
+        1,
+        2,
         null,
+        2,
         null,
         null,
         1,
@@ -295,36 +315,67 @@
         null,
         null,
         1,
-        0,
+        2,
         null,
-        0,
-        0,
-        null,
-        0,
-        null,
+        2,
         null,
         null,
         1,
-        0,
+        1,
         null,
-        0,
-        0,
-        null,
+        1,
         null,
         null,
         1,
-        0,
+        2,
         null,
         null,
         1,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/app/controllers/application_controller.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/app/controllers/application_controller.rb": [
         1,
         1,
         null
       ],
-      "/home/juanma/meta_blog/meta_blog/app/models/blog_entry.rb": [
+      "/home/juanma/meta_blog/meta_blog/backend/app/controllers/comments_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/home/juanma/meta_blog/meta_blog/backend/app/models/blog_entry.rb": [
         1,
         1,
         null,
@@ -336,9 +387,17 @@
         null,
         null,
         null,
+        null
+      ],
+      "/home/juanma/meta_blog/meta_blog/backend/app/models/comment.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
         null
       ]
     },
-    "timestamp": 1408574981
+    "timestamp": 1409389953
   }
 }

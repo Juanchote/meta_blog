@@ -1868,3 +1868,110 @@ Processing by CommentsController#destroy as HTML
   [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
 Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.9ms)
   [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"test title", "post"=>"test body"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "blog_entries" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-30 09:12:33.597116"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-30 09:12:33.597116"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 20ms (Views: 0.1ms | ActiveRecord: 3.2ms)
+  [1m[35m (0.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#create as HTML
+  Parameters: {"blog_entry"=>{"title"=>"just title"}}
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#index as HTML
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT "blog_entries".* FROM "blog_entries"
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-30 09:12:33.626358"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-30 09:12:33.626358"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.6ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 28ms (Views: 0.1ms | ActiveRecord: 2.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by BlogEntriesController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mBlogEntry Load (2.8ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = -1 LIMIT 1
+Completed 404 Not Found in 5ms (Views: 0.2ms | ActiveRecord: 2.8ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-30 09:12:33.671561"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-30 09:12:33.671561"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BlogEntriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (0.4ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "blog_entries" WHERE "blog_entries"."id" = $1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-30 09:12:33.682248"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-30 09:12:33.682248"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"test title", "post"=>"test body"}, "id"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.7ms)[0m  INSERT INTO "comments" ("blog_entry_id", "created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["blog_entry_id", 1], ["created_at", "2014-08-30 09:12:33.692725"], ["post", "test body"], ["title", "test title"], ["updated_at", "2014-08-30 09:12:33.692725"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 13ms (Views: 0.5ms | ActiveRecord: 5.1ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-08-30 09:12:33.707242"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-30 09:12:33.707242"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#create as HTML
+  Parameters: {"comment"=>{"title"=>"just title"}, "id"=>"1"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "blog_entries" ("created_at", "id", "post", "title", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-08-30 09:12:33.719261"], ["id", 1], ["post", "Testing the first Blog Entry"], ["title", "First Entry"], ["updated_at", "2014-08-30 09:12:33.719261"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CommentsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBlogEntry Load (1.2ms)[0m  SELECT  "blog_entries".* FROM "blog_entries"  WHERE "blog_entries"."id" = 1 LIMIT 1
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."blog_entry_id" = $1  ORDER BY "comments"."id" DESC[0m  [["blog_entry_id", 1]]
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 1.8ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-08-30 09:12:33.734226"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-30 09:12:33.734226"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 18 LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"-1"}
+  [1m[35mComment Load (0.3ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = -1 LIMIT 1
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "comments" ("created_at", "post", "title", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-08-30 09:12:33.748539"], ["post", "Best Entry ev4h"], ["title", ""], ["updated_at", "2014-08-30 09:12:33.748539"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CommentsController#destroy as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 19 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = $1  [["id", 19]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.7ms)[0m  ROLLBACK
