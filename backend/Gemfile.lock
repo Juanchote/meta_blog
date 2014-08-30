@@ -215,6 +215,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails
+  rake
   rspec-rails (~> 3.0.0)
   sass-rails
   uglifier (>= 1.0.3)
