@@ -3,28 +3,28 @@ include ApplicationHelper
 class CommentsController < ApplicationController
 
   def create
-    @comment = Comment.new(comment_params)
-    @comment.assign_attributes(blog_entry_id: params[:id])
+    @blog_entry = BlogEntry.find(params[:blog_entry_id])
+    @comment = @blog_entry.comments.create(comment_params)
 
-    set(@comment)
+    save_for(@comment)
   end
 
   def index
-    @comments = BlogEntry.find_by_id(params[:id]).comments.order(id: :desc)
+    @comments = BlogEntry.find_by_id(params[:blog_entry_id]).comments.order(id: :desc)
 
-   get(@comments)
+    render_for(@comments)
   end
 
   def show
-    @comment = Comment.find_by_id params[:id]
+    @comment = Comment.find_by_id params[:blog_entry_id]
 
-    get(@comment)
+    render_for(@comment)
   end
 
   def destroy
-    @comment = Comment.find_by_id params[:id]
+    @comment = Comment.find_by_id params[:blog_entry_id]
 
-    delete(@comment)
+    destroy_for(@comment)
   end
 
   private

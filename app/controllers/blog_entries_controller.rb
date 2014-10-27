@@ -7,64 +7,29 @@ class BlogEntriesController < ApplicationController
   end
 
   def create
-    @blog_entry = BlogEntry.new(blog_entry_params)
+    @blog_entry = BlogEntry.create(blog_entry_params)
 
-    respond_to do |format|
-      if object.save
-        format.html
-        format.json { render json: object, status: :created }
-      else
-        format.html { render 'new' }
-        format.json { render json: object, status: :unprocessable_entity }
-      end
-    end
+    save_for(@blog_entry)
   end
 
   def index
     @blog_entries = BlogEntry.all
 
-    object = @blog_entries
-    respond_to do |format|
-      if object
-        format.html
-        format.json { render json: output, status: :ok }
-      else
-        format.html { not_found }
-        format.json { render json: { errors: 'Entry not found' }, status: :not_found }
-      end
-    end
+    render_for(@blog_entries)
   end
 
   def show
     @blog_entry = BlogEntry.find_by(id: params[:id])
 
-    object = @blog_entry
-    respond_to do |format|
-      if object
-        output = object.to_json(:include => :comments)
-        format.html
-        format.json { render json: output, status: :ok}
-      else
-        format.html { not_found }
-        format.json { render json: { errors: 'Entry not found' }, status: :not_found }
-      end
-    end
+    render_for(@blog_entry, {:include => :comments})
   end
 
   def destroy
     @blog_entry = BlogEntry.find_by_id params[:id]
 
-    object = @blog_entry
+    destroy_for(@blog_entry)
 
-    respond_to do |format|
-      if object.destroy
-        format.html
-        format.json { render json: object, status: :ok }
-      else
-        format.html
-        format.json { render json: object, status: :unprocessable_entity }
-      end
-    end
+
   end
 
   private
@@ -72,5 +37,4 @@ class BlogEntriesController < ApplicationController
   def blog_entry_params
     params.require(:blog_entry).permit(:title, :post)
   end
-
 end
