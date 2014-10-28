@@ -12,7 +12,7 @@ gem 'activerecord-session_store'
 
 gem "codeclimate-test-reporter", group: :test, require: nil
 
-group :development do
+group :development, :test do
 	gem 'jazz_hands'
   gem 'thin'
 end

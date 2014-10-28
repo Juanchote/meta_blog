@@ -8,7 +8,7 @@ RSpec.describe CommentsController do
       json = {"title" => "test title",
               "post" => "test body"
               }
-      before { get :create, :comment => json, :id => blog_entry.id }
+      before { post :create, :comment => json, :blog_entry_id => blog_entry.id, :format => :json }
 
       it { expect(response).to have_http_status(:created) }
     end
@@ -16,7 +16,7 @@ RSpec.describe CommentsController do
     context "with invalid values" do
       json = { "title" => "just title" }
 
-      before { get :create, :comment => json, :id => blog_entry.id }
+      before { post :create, :comment => json, :blog_entry_id => blog_entry.id, :format => :json }
 
       it {expect(response).to have_http_status(:unprocessable_entity)}
     end
@@ -25,7 +25,7 @@ RSpec.describe CommentsController do
   describe "#index" do
     let(:blog_entry) { FactoryGirl.create(:blog_entry) }
 
-    before { get :index, :id => blog_entry.id }
+    before { get :index, { :blog_entry_id => blog_entry.id }, :format => :json }
     it { expect(response).to have_http_status(:ok) }
   end
 
@@ -33,12 +33,12 @@ RSpec.describe CommentsController do
     context "with valid id" do
       let(:comment) { FactoryGirl.create(:comment) }
 
-      before { get :show, :id => comment.id }
+      before { get :show, { :blog_entry_id => comment.blog_entry_id, :id => comment.id }, :format => :json }
       it { expect(response).to have_http_status(:ok) }
     end
 
     context "with invalid id" do
-      before { get :show, :id => -1 }
+      before { get :show, { :blog_entry_id => -1, :id => -1 }, :format => :json }
       it { expect(response).to have_http_status(:not_found) }
     end
   end
@@ -46,7 +46,7 @@ RSpec.describe CommentsController do
   describe "#destroy" do
     let(:comment) { FactoryGirl.create(:comment) }
 
-    before { delete :destroy, :id => comment.id }
+    before { delete :destroy, { :blog_entry_id => comment.blog_entry_id, :id => comment.id }, :format => :json }
 
     it { expect(response).to have_http_status(:ok) }
   end

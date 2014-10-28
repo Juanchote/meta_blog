@@ -2,13 +2,8 @@ MetaBlog::Application.routes.draw do
 
 scope :meta_blog do
   root :to => 'blog_entries#index', as: 'meta_blog'
-  resources :blog_entries, :defaults => { :format => 'html' } do
-    resources :comments, :defaults => { :format => 'html' }
-  end
- scope :api do
-    resources :blog_entries, :except => [:new], :defaults => { :format => 'json' } do
-      resources :comments, :except => [:new], :defaults => { :format => 'json' }
-    end
+  resources :blog_entries, :defaults => { :format => ['html', 'json'] } do
+    resources :comments, :defaults => { :format => ['html', 'json'] }
   end
 end
 
